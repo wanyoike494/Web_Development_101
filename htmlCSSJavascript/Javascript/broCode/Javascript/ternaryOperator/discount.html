@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+</head>
+<body>
+    <div>
+        <label for="discountINPUT">Enter The Price</label><br><br>
+        <input id="discountINPUT" type="number" placeholder="Enter Cost"><br><br>
+        <button id="checkdiscount">Check Discount</button>
+        <p id="discount"></p>
+        <p id="buyingprice"></p>
+        
+    </div>
+    <script>
+        let purchaseprice;
+        let discount;
+        let buyingprice;
+        document.getElementById("checkdiscount").onclick = () => {
+            purchaseprice = Number(purchaseprice);
+            discount = purchaseprice >= 100 ? 10 : 0;
+            dicount= Number(discount)
+            document.getElementById("discount").textContent = discount;
+            buyingprice = purchaseprice-discount;
+            document.getElementById("buyingprice").textContent = buyingprice;
+
+            // will come back and debug
+        };
+    </script>
+    
+</body>
+</html>

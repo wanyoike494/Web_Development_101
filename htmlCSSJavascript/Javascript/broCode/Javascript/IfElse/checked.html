@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked</title>
+    <style>
+        body{
+            font-family: Verdana;
+            font-size: 2em;
+        }
+        #mysubmit{
+            font-size: 1em;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="mycheckbox">
+    <label for="mycheckbox">Subscribe</label><br><br>
+
+    <input type="radio" id="visabtn">
+    <label for="visabtn">Visa</label><br>
+    <input type="radio" id="mastercardbtn">
+    <label for="mastercardbtn">Mastercard</label><br>
+    <input type="radio" id="paypalbtn">
+    <label for="paypalbtn">Paycard</label><br><br>
+
+    <button type="submit" id="mysubmit">Submit</button>
+
+    <p id="subresult"></p>
+    <p id="paymentresult"></p>
+
+    <script>
+        const mycheckbox = document.getElementById("mycheckbox");
+        const visabtn = document.getElementById("visabtn");
+        const mastercardbtn = document.getElementById("mastercardbtn");
+        const mysubmit = document.getElementById("mysubmit");
+        const subresult = document.getElementById("subresult");
+        const paymentresult = document.getElementById("paymentresult");
+
+        mysubmit.onclick = () => {
+            if(mycheckbox.checked){
+                subresult.textContent = `You are subscribed`
+            }
+            else{
+                subresult.textContent = `You are Not Subscribed`
+            }
+            if(visabtn.checked){
+                paymentresult.textContent = `You are paying using Visa`
+            }else if(mastercardbtn.checked){
+                paymentresult.textContent = `You are paying with mastercard`
+            }else if(paypalbtn.checked){
+                paymentresult.textContent = `You are paying with paypal`
+            }else {
+                paymentresult.textContent = `YOU MUST SELECT A PAYMENT METHOD`
+            }
+        }
+
+    </script>
+
+</body>
+</html>

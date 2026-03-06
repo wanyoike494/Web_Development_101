@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sting Methods</title>
+</head>
+<body>
+    <label id="string1">Input a string to work on</label><br><br>
+    <input id="input1" for="string1" placeholder="Input string to work on"><br><br>
+    <button id="compute">Compute</button>
+    <p id="length"></p>
+    <p id="repeat"></p>
+    <p id="startwith"></p>
+    <p id="endswith"></p>
+    <p id="includes"></p>
+    <p id="replaceall"></p>
+    <p id="slice"></p>
+    <p id="slice2"></p>
+
+    
+
+
+
+    <script>
+        let string1;
+        document.getElementById("compute").onclick = () =>{
+            string1 = document.getElementById("input1").value;
+            document.getElementById("length").textContent = string1.length;
+            document.getElementById("repeat").textContent = string1.repeat(3);
+            document.getElementById("startwith").textContent = string1.startsWith("J");
+            document.getElementById("endswith").textContent = string1.endsWith("j");
+            document.getElementById("includes").textContent = string1.includes("w");
+            document.getElementById("replaceall").textContent = string1.replaceAll("o", "0");
+            document.getElementById("slice").textContent = string1.slice(2, 5);
+            document.getElementById("slice2").textContent = string1.slice(2, string1.indexOf("W"));
+
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container1{
+            width: 400px;
+            padding: 20px;
+            background: lightblue;
+        }
+        #countLabel{
+            display: block;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+
+
+        }
+        #buttons1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <label id="countLabel">0</label><br>
+
+        <div id="buttons1">
+        <button id="decrease" class="buttons">decrease</button>
+        <button id="reset" class="buttons">Reset</button>
+        <button id="increase" class="buttons">Increase</button>
+
+        
+        </div>
+        
+    </div>
+<script>
+    const increasebtn = document.getElementById("increase");
+    const resetbtn = document.getElementById("reset");
+    const decreasebtn = document.getElementById("decrease");
+    const countLabel = document.getElementById("countLabel");
+    let count = 0;
+
+    increasebtn.onclick = () => {
+        count++;
+        countLabel.textContent = count;
+    }
+
+    resetbtn.onclick = () => {
+        count = 0;
+        countLabel.textContent = count;    
+    }
+    decreasebtn.onclick = () => {
+        count--;
+        countLabel.textContent = count;
+    }
+</script>
+</body>
+</html>

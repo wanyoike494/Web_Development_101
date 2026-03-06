@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randomNumberGenerator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #randomContainer{
+            background-color: grey;
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+            
+        }
+    </style>
+</head>
+    <div id="randomContainer">
+        <label>Random number generator</label><br><br>
+        <input id="rand" placeholder="MaxNumber"></input><br><br>
+        <button id="Generate">Generate</button><br>
+        <p id="GeneratedNumber">GeneratedNumber</p>
+    </div>
+
+    <script>
+        let number1;
+        let MaxNumber;
+        document.getElementById("Generate").onclick = () => {
+            MaxNumber = document.getElementById("rand").value;
+            MaxNumber=Number(MaxNumber);
+            let randomNum = Math.floor(Math.random() * MaxNumber) + 1;
+            document.getElementById("GeneratedNumber").textContent = randomNum;
+        }
+    </script>
+
+    
+</body>
+</html>

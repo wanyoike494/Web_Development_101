@@ -1,0 +1,15 @@
+.welcome{
+  font-size: 2em;
+  background-color: hsl(120, 100%, 42%);
+  color: white;
+  padding: 10px;
+  margin: 0;
+
+}
+.login{
+  font-size: 2em;
+  background-color: red;
+  color: black;
+  padding: 10px;
+  margin: 0;
+}

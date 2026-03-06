@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="startlabel">Start Number</label><br><br>
+    <input id="startinput" for="startlabel" placeholder="Enter Start Number"><br><br>
+
+    <label id="endlabel">End Number</label><br><br>
+    <input id="endinput" for="endlabel" placeholder="Enter End Number"><br><br>
+
+    <button id="Analyze">Analyze</button>
+    <div id="output"></div>
+
+    <script>
+        do {
+            startnumber = prompt("Enter Start Number");
+            endnumber = prompt("Enter Start Number");
+            
+            endnumber = Number(endnumber);
+             
+
+        } while((endnumber = Number(endnumber)) && (startnumber < endnumber) && (startnumber = Number(startnumber)));
+
+    </script>
+    
+</body>
+
+</html>
+
+
+

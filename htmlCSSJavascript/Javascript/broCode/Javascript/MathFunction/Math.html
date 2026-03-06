@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+
+    <label id="roundLabel">Round</label><br>
+    <input id="roundInput" placeholder="Input number to round"></input><br>
+    <button id="roundBtn">Round</button><br>
+    <p id="roundAnswer">Rounded</p><br>
+
+    <script>
+        let round1;
+        document.getElementById("roundBtn").onclick = () => {
+            round1 = document.getElementById("roundInput").value;
+            round1=Number(round1);
+            rounded = Math.round(round1);
+            document.getElementById("roundAnswer").textContent = rounded;
+        }
+
+        // floor, ceil, trunc, pow, sqrt, log, sin, cos, tangent, abs(neg to pos)
+
+    </script>
+</body>
+</htm>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-is it day</title>
+</head>
+<body>
+    <div>
+        <label id="daylabel" type="numer">Check whether its day of week</label><br>
+        <input id="dayinput" for="daylabel" placeholder="Enter number to check"><br><br>
+        <button id="checkday">Check if its day</button><br>
+        <p id="displayday"></p>
+    </div>
+
+    <script>
+        let daynumber;
+        document.getElementById("checkday").onclick = () => {
+            daynumber = document.getElementById("dayinput").value;
+            daynumber = Number(daynumber);
+            switch(daynumber){
+                case 1:
+                    document.getElementById("displayday").textContent = `Sunday`;
+                    break;
+                case 2:
+                    document.getElementById("displayday").textContent = `Monday`;
+                    break;
+                case 3:
+                    document.getElementById("displayday").textContent = `Tuesday`;
+                    break;
+                case 4:
+                    document.getElementById("displayday").textContent = `Wednesday`;
+                    break;
+                case 5:
+                    document.getElementById("displayday").textContent = `Thursday`;
+                    break;
+                case 6:
+                    document.getElementById("displayday").textContent = `Friday`;
+                    break;
+                case 7:
+                    document.getElementById("displayday").textContent = `Saturday`;
+                    break;
+                default:
+                    document.getElementById("displayday").textContent = `IT NOT A DAY`
+                
+            }
+        };
+    </script>
+    
+</body>
+</html>

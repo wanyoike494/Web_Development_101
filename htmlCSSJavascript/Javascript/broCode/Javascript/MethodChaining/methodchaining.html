@@ -1,0 +1,27 @@
+<!-- calling one method after another in one continous line -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining</title>
+ </head>
+ <body>
+    <label id="labelinput">Enter a string</label><br><br>
+    <input id="input1" placeholder="Enter string" for="labelinput"><br><br>
+    <button id="button1" type="">Execute</button>
+    <p id="results"></p>
+
+    <script>
+        let string1;
+        document.getElementById("button1").onclick = () => {
+            string1 = document.getElementById("input1").value;
+            string1 = string1.trim().charAt(0).toUpperCase() + string1.trim().slice(1).toLowerCase();
+            document.getElementById("results").textContent = string1;
+
+        }
+    </script>
+
+    
+ </body>
+ </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Password</title>
+</head>
+<body>
+    <label id="checkloginlabel">Check Password</label><br><br>
+    <input id="input1" for="checkloginlabel" placeholder="Input password"><br><br>
+    <button id="button1">Check Password</button><br><br>
+    <p id="pass"></p>
+
+    <script>
+        let number1;
+        document.getElementById("button1").onclick = () => {
+            number1 = document.getElementById("input1").value;
+            number1 = Number(number1);
+            while (number1 == 5) {
+                document.getElementById("pass").textContent = `Password`;
+                break;
+
+            }
+        }
+    </script>
+    
+</body>
+</html>

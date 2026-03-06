@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday</title>
+</head>
+<body>
+    <label>Year of birth</label><br>
+    <input id="YOB" placeholder="Enter Year of Birth"><br><br>
+
+    <label>Month of birth</label><br>
+    <input id="MOB" placeholder="Enter Year of Birth"><br><br>
+
+    <label>Day of birth</label><br>
+    <input id="DOB" placeholder="Enter Year of Birth"><br><br>
+
+    <button id="BirthBtn">Is it My Birthday</button><br>
+    <p id="Display"></p>
+
+    <script>
+        let year, month, day;
+        document.getElementById("BirthBtn").onclick = () => {
+            year = document.getElementById("YOB").value;
+            month = document.getElementById("MOB").value;
+            day = document.getElementById("DOB").value;
+
+            year=Number(year);
+            month=Number(month);
+            day=Number(day);
+
+            if (year == 1994 && month == 4 && day==27 ){
+                document.getElementById("Display").textContent = `It My Birthday`;
+            } else {
+                document.getElementById("Display").textContent = `It Not My Birtday`;
+            };
+
+        };
+
+
+
+    </script>
+    
+</body>
+</html>
