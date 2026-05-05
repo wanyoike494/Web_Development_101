@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach() method is used to iterate over the elements of an array and apply a specifiedd function
+        //(callback) to each element
+
+        //array.forEach(callback)
+        //element, index, array are provided
+
+        let numbers = [1,2,3,4,5];
+
+        // numbers.forEach(double);
+        numbers.forEach(tripple);
+        numbers.forEach(display);
+       
+        
+        
+        function double(element, index, array){
+            array[index] = element * 2;
+        }
+
+
+         function tripple(element, index, array){
+            array[index] = element * 3;
+        }
+        function display(element){
+            console.log(element)
+        }
+    </script>
+</body>
+</html>

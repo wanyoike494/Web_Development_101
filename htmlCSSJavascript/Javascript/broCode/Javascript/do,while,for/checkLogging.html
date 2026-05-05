@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Logging</title>
+</head>
+<body>
+    <label id="label1">input username</label><br><br>
+    <input id="username" for="username" placeholder="Input username"><br><br>
+
+    <label id="passlabel">Input password</label><br><br>
+    <input id="pass" for="passlabel" placeholder="input password" ><br><br>
+
+    <button id="check">Check Password</button><br><br>
+    <p id="display"></p><br>
+
+    <script>
+        let loggedin = false;
+        let username;
+        let password;
+
+        document.getElementById("check").onclick = () =>{
+            while(!loggedin){
+                username = document.getElementById("username").value;
+                password = document.getElementById("pass").value;
+
+                if(username === "admin" && password==="pass"){
+                    loggedin = true;
+                    document.getElementById("display").textContent="You are loggedin"
+                }
+                else{
+                    loggedin = false;
+                    document.getElementById("display").textContent="Invalid Credial PLEASE TRY AGAIN"
+                }
+
+
+            };
+        };
+        
+    </script>
+</body>
+
+</html>

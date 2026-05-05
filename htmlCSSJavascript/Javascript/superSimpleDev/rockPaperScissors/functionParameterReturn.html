@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Papers Scissors Game</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+        color: indigo;
+        text-align: center;
+        height: 100vh;
+        font-size: 36px;
+    }
+    .button{
+        height: 36px;
+        width: 84px;
+        border-radius: 10px;
+    }
+
+</style>
+<body>
+    <div id="container">
+        <label id="label1">Rock Paper Scissors</label><br><br>
+        <div id="buttons1">
+            <button id="rock" class="button">Rock</button>
+            <button id="paper" class="button">Paper</button>
+            <button id="scissors" class="button">Scissors</button>
+            <p id="display"></p>
+        </div>
+    </div>
+
+    <script>
+        
+        function pickComputerMove(playMove) {
+            let randomNumber = Math.random();
+            let computerMove;
+            let result;
+
+            if (randomNumber >= 0 && randomNumber < 1/3){
+                computerMove = 'rock'
+            } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+                computerMove = 'paper'
+            }else if (randomNumber >= 2/3 && randomNumber < 1){
+                computerMove = 'scissors'
+            }
+            if(playMove === 'rock'){
+                if(computerMove === 'rock'){
+                    result = 'TIE'
+                } else if (computerMove === 'paper'){
+                    result = 'YOU LOSE'
+                } else if (computerMove === 'scissors'){
+                    result = 'YOU WIN'
+                }
+            }
+            if(playMove === 'paper'){
+                if(computerMove === 'rock'){
+                    result = 'YOU WIN'
+                } else if (computerMove === 'paper'){
+                    result = 'TIE'
+                } else if (computerMove === 'scissors'){
+                    result = 'YOU LOSE'
+                }
+            }
+            if(playMove === 'scissors'){
+                if(computerMove === 'rock'){
+                    result = 'YOU LOSE'
+                } else if (computerMove === 'paper'){
+                    result = 'YOU WIN'
+                } else if (computerMove === 'scissors'){
+                    result = 'TIE'
+                }
+            }
+            
+            return{computerMove, result};
+        }
+        document.getElementById("rock").onclick = () =>{
+            let game = pickComputerMove('rock')
+            document.getElementById("display").textContent = `You picked ROCK Computer picked ${game.computerMove}: Result ${game.result}`;
+
+        }
+        document.getElementById("paper").onclick = () =>{
+            let game = pickComputerMove('paper')
+            document.getElementById("display").textContent = `You picked PAPER Computer picked ${game.computerMove}: Result ${game.result}`;
+
+        }
+        document.getElementById("scissors").onclick = () =>{
+            let game = pickComputerMove('scissors')
+            document.getElementById("display").textContent = `You picked SCISSORS Computer picked ${game.computerMove}: Result ${game.result}`;
+
+        }
+
+        
+    </script>
+
+</body>
+</html>

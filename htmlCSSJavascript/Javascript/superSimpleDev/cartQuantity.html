@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quatity</title>
+    <style>
+        body{
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="cartContainer">
+        <label id="label1">Cart Quantity</label><br>
+        <button id="show">Show Quantity</button>
+        <button id="addToCart">Add to Cart</button>
+        <button id="plus2">Add 2</button>
+        <button  id="plus3">Add Three</button>
+        <button id="reset">Reset</button>
+        <p  id="displayCart"></p>
+
+    </div>
+
+    <script>
+        let Quantity = 0;
+        document.getElementById("show").onclick = () => {
+            document.getElementById("displayCart").textContent = Quantity;
+        }
+        document.getElementById("addToCart").onclick = () => {
+            Quantity+=1;
+            document.getElementById("displayCart").textContent = Quantity;
+        }
+        document.getElementById("plus2").onclick = () => {
+            Quantity+=2
+            document.getElementById("displayCart").textContent = Quantity;
+        }
+        document.getElementById("plus3").onclick = () => {
+            Quantity+=3
+            document.getElementById("displayCart").textContent = Quantity;
+        }
+        document.getElementById("reset").onclick = () => {
+            Quantity = 0;
+            document.getElementById("displayCart").textContent = 0;
+        }
+    </script>
+    
+</body>
+</html>

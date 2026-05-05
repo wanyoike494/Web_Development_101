@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+            background-color: indigo;
+            font-size: 36px;
+            color: red;
+        }
+        .container{
+            background-color: grey;
+        }
+        .button{
+            height: 64px;
+            width: 96px;
+            border-radius: 10px;
+            font-size: 21px;
+            color: black;
+        }
+        .button:hover{
+            background-color: orange;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <label id="Rock Paper Scissors">Rock Paper Scissors</label><br><br>
+        <button id="rock" class="button">Rock</button>
+        <button id="paper" class="button">Paper</button>
+        <button id="scissors" class="button">Scissors</button><br><br>
+        <p id="result"></p>
+
+    </div>
+    <script>
+        let randomNumber;
+        document.getElementById("rock").onclick = () => {
+            randomNumber  = Math.random();
+            if(randomNumber >= 0 && randomNumber < 1/3){
+                document.getElementById("result").textContent = `Computer Selected Rock You selected Rock Its a Tie`;
+            } else if(randomNumber >= 1/3 && randomNumber < 2/3){
+                document.getElementById("result").textContent = `Computer Selected Paper You selected Rock You Lose`;
+            } else if(randomNumber >= 2/3 && randomNumber < 1){
+                document.getElementById("result").textContent = `Computer Selected Scissors You selected Rock You Win`;
+            } 
+        }
+        document.getElementById("paper").onclick = () => {
+            randomNumber  = Math.random();
+            if(randomNumber >= 0 && randomNumber < 1/3){
+                document.getElementById("result").textContent = `Computer Selected Rock You selected Paper You Win`;
+            } else if(randomNumber >= 1/3 && randomNumber < 2/3){
+                document.getElementById("result").textContent = `Computer Selected Paper You selected Paper Its a Tie`;
+            } else if(randomNumber >= 2/3 && randomNumber < 1){
+                document.getElementById("result").textContent = `Computer Selected Scissors You selected Paper You Lose`;
+            } 
+        }
+        document.getElementById("scissors").onclick = () => {
+            randomNumber  = Math.random();
+            if(randomNumber >= 0 && randomNumber < 1/3){
+                document.getElementById("result").textContent = `Computer Selected Rock You selected Scissors You Lose`;
+            } else if(randomNumber >= 1/3 && randomNumber < 2/3){
+                document.getElementById("result").textContent = `Computer Selected Paper You selected Scissors You Win`;
+            } else if(randomNumber >= 2/3 && randomNumber < 1){
+                document.getElementById("result").textContent = `Computer Selected Scissors You selected Scissors Its a Tie`;
+            } 
+        }
+    </script>
+
+    
+</body>
+
+</html>

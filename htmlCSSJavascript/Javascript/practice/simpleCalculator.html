@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="operand">
+            <label id="label1">Input Operand 1</label><br><br>
+            <input id="input1" for="label1" placeholder="Input Operand 1"><br><br>
+            <label id="label2">Input Operand 1</label><br><br>
+            <input id="input2" for="label2" placeholder="Input Operand 2"><br><br>
+        </div>
+        <div class="operator">
+            <button id="button1">Addition</button>
+            <button id="button2">Subtraction</button>
+            <button id="button3">Multiplication</button>
+            <button id="button4">Division</button>
+        </div>
+        <div class="results">
+            <p id="resultsdisplay"></p>
+        </div>
+
+        <script>
+           document.getElementById("button1").addEventListener('click', (e) => {
+                e.preventDefault();
+                let operand1 = parseFloat(document.getElementById("input1").value) //|| 0;
+                let operand2 = parseFloat(document.getElementById("input2").value) //|| 0;
+
+                if(isNaN(operand1) || isNaN(operand2)) {
+                    document.getElementById("resultsdisplay").textContent = `Input Valid Number ${operand1 || operand2}`;
+                }
+
+                let sum = operand1 + operand2;
+                document.getElementById("resultsdisplay").textContent = sum;
+            });
+            document.getElementById("button2").onclick = () => {
+                let operand1 = parseFloat(document.getElementById("input1").value) //|| 0;
+                let operand2 = parseFloat(document.getElementById("input2").value) //|| 0;
+
+                let sub = operand1 - operand2;
+                document.getElementById("resultsdisplay").innerHTML = sub;
+            }
+
+            
+        </script>
+        
+    </div>
+</body>
+</html>

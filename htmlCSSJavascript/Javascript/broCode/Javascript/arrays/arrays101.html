@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        let fruits = ['apple', 'orange', 'banana'];
+        fruits.push('avocado') //adds an item
+        fruits.pop()//removes the last element
+        fruits.unshift('mango')//adds an item to the begggining
+        fruits.shift()//removes the first elem(ent
+        console.log(fruits);
+        console.log(fruits.length);
+        console.log(fruits.indexOf('orange'));
+        console.log(fruits.sort())
+        console.log(fruits.sort().reverse())
+
+        for(let i = 0; i<fruits.length; i++){
+            console.log(fruits[i])
+        }
+        for (let fruit of fruits){
+            console.log(fruit)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aDDITION cALC</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: gray;
+        color: red;
+    }
+    #calc{
+        /* display: flex; */
+        gap: 10px;
+        /* align-items: center; */
+    }
+</style>
+<body>
+    <div id="calc">
+        <label id="label1">Input number1</label><br><br>
+        <input id="input1" for="label1" placeholder="Input 1"><br><br>
+        <label id="label2">Input number2</label><br><br>
+        <input id="input2" for="label2" placeholder="input 2"><br><br>
+        <button id="button1">Add</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let num1;
+        let num2;
+        let result;
+        document.getElementById("button1").onclick = () => {
+            num1 = document.getElementById("input1").value;
+            num1 = Number(num1);
+            num2 = document.getElementById("input2").value;
+            num2 = Number(num2);
+            result = num1 +num2;
+
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+    
+</body>
+</html>

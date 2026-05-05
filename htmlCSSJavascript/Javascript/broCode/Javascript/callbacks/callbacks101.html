@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <script>
+        //callback = function that is passed as an argument to another function
+        //used to handle asynchronous operations:
+        //   1. reading a file
+        //   2. network requests
+        //   3. interacting with databases
+        //'hey, when you are done call this next'
+
+        hello(leave);
+        goodbye();
+
+        function hello(callback){
+            setTimeout(() => {
+                console.log("Hello Joseph Wanyoike Njoroge. One day you will be a Programmer")
+            }, 3000);
+        }
+        function wait(){
+            console.log("WAIT")
+         }
+
+         function leave(){
+            console.log("LEAVE")
+         }
+
+        function goodbye(){
+            console.log("Goodbye")
+        }
+
+    </script>
+</body>
+</html>
