@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="execute">Execute</button>
+    <p id="name">New string will appear here</p>
+
+    <script>
+        document.getElementById('execute').addEventListener('click', () => {
+            let fruits = ["apples", "mangos", "watermelon", "kiwi", "oranges"];
+
+            function upperCase(element, index, array){
+                array[index] = element.toUpperCase();
+            }
+
+            function display(element){
+                console.log(element);
+            }
+            fruits.forEach(upperCase);
+            fruits.forEach(display);
+
+            document.getElementById('name').textContent = fruits.join(", ");
+        });
+        
+    </script>
+    
+</body>
+</html>
